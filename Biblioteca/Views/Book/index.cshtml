@@ -1,0 +1,32 @@
+﻿@model Biblioteca.ViewModels.BooksListViewModel
+
+<h2>Lista dei Libri</h2>
+
+@if (Model.Books != null && Model.Books.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Titolo</th>
+                <th>Autore</th>
+                <th>Genere</th>
+                <th>Disponibile</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var book in Model.Books)
+            {
+                <tr>
+                    <td>@book.Titolo</td>
+                    <td>@book.Autore</td>
+                    <td>@book.Genere</td>
+                    <td>@(book.Disponibile ? "Disponibile" : "Non disponibile")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Nessun libro disponibile.</p>
+}

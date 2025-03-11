@@ -1,7 +1,7 @@
 ﻿using Biblioteca.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Biblioteca
+namespace Biblioteca.Data
 {
     public class BibliotecaContext : DbContext
     {
@@ -10,7 +10,7 @@ namespace Biblioteca
         {
         }
 
-        public DbSet<Libro> Libri { get; set; }
+        public DbSet<Book> Books { get; set; }
         public DbSet<Prestito> Prestiti { get; set; }
     }
 }

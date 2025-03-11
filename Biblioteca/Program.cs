@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Biblioteca;
 using Biblioteca.Services;
+using Biblioteca.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +34,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Book}/{action=Index}/{id?}");
 
 app.Run();

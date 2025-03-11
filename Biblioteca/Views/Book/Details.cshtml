@@ -1,0 +1,19 @@
+﻿@model Biblioteca.ViewModels.BookDetailsViewModel
+
+@{
+    ViewData["Title"] = "Dettagli del libro";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Titolo</h5>
+        <p class="card-text"><strong>Autore:</strong> @Model.Autore</p>
+        <p class="card-text"><strong>Genere:</strong> @Model.Genere</p>
+        <p class="card-text"><strong>Disponibile:</strong> @(Model.Disponibile ? "Sì" : "No")</p>
+        <img src="@Model.CoperturaUrl" alt="Copertura del libro" class="img-fluid" />
+    </div>
+</div>
+
+<a href="@Url.Action("Index", "Book")" class="btn btn-secondary mt-3">Indietro</a>

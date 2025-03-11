@@ -1,0 +1,43 @@
+﻿@model Biblioteca.ViewModels.AddBookViewModel
+
+@{
+    ViewData["Title"] = "Aggiungi un libro";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Add" method="post">
+    <div class="form-group">
+        <label asp-for="Titolo" class="control-label"></label>
+        <input asp-for="Titolo" class="form-control" />
+        <span asp-validation-for="Titolo" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Autore" class="control-label"></label>
+        <input asp-for="Autore" class="form-control" />
+        <span asp-validation-for="Autore" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Genere" class="control-label"></label>
+        <input asp-for="Genere" class="form-control" />
+        <span asp-validation-for="Genere" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CoperturaUrl" class="control-label"></label>
+        <input asp-for="CoperturaUrl" class="form-control" />
+        <span asp-validation-for="CoperturaUrl" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Disponibile" class="control-label"></label>
+        <input asp-for="Disponibile" class="form-control" />
+        <span asp-validation-for="Disponibile" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Aggiungi</button>
+</form>
+
+<a href="@Url.Action("Index", "Book")" class="btn btn-secondary mt-3">Indietro</a>

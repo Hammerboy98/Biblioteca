@@ -1,6 +1,5 @@
-﻿using Biblioteca.Models;
-
-namespace Biblioteca.ViewModels
+﻿
+namespace Biblioteca.Models
 {
     public class Book
     {
@@ -10,15 +9,16 @@ namespace Biblioteca.ViewModels
         public string Genere { get; set; }
         public bool Disponibile { get; set; }
         public string CoperturaUrl { get; set; }
+
     }
 }
 
 // ViewModels/ProductsListViewModel.cs
-namespace Biblioteca.ViewModels
+namespace Biblioteca.Models
 {
-    public class ProductsListViewModel
+    public class BooksListViewModel
     {
         // Lista di libri (Book)
-        public List<Book>? Products { get; set; }
+        public List<Book>? Books { get; set; }
     }
 }
