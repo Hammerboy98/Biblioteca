@@ -11,6 +11,6 @@ namespace Biblioteca.ViewModels
         public string Genere { get; internal set; }
         public string CoperturaUrl { get; internal set; }
 
-        public string Disponibile { get; internal set; }
+        public bool Disponibile { get; internal set; }
     }
 }

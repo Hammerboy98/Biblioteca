@@ -89,7 +89,7 @@ namespace Biblioteca.Services
             }
         }
 
-        public async Task<BookDetailsViewModel?> GetBookDetailsByIdAsync(Guid id)
+        public async Task<BookDetailsViewModel?> GetBookDetailsByIdAsync(int id)
         {
             try
             {
@@ -107,7 +107,8 @@ namespace Biblioteca.Services
                     Titolo = book.Titolo,
                     Autore = book.Autore,
                     CoperturaUrl = book.CoperturaUrl,
-                    Genere = book.Genere
+                    Genere = book.Genere,
+                    Disponibile = true
                 };
 
                 return bookDetails;

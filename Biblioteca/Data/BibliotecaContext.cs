@@ -12,5 +12,15 @@ namespace Biblioteca.Data
 
         public DbSet<Book> Books { get; set; }
         public DbSet<Prestito> Prestiti { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configura la tabella "libri" per la classe Book
+            modelBuilder.Entity<Book>().ToTable("libri");
+
+            // Puoi aggiungere altre configurazioni per altre entità se necessario
+        }
     }
 }
